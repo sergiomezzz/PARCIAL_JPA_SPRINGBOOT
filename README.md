@@ -8,6 +8,9 @@ Este proyecto es una API REST desarrollada con Spring Boot y JPA para la gestió
 - **repository/**: Interfaces que extienden JpaRepository para el acceso a datos.
 - **services/**: Lógica de negocio y servicios de la aplicación.
 
+## Persistencia de datos
+La persistencia de los datos se realiza en una base de datos PostgreSQL alojada en Supabase.
+
 ## Requisitos previos
 - Java 17 
 - Maven 3.8+
