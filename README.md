@@ -8,6 +8,9 @@ Este proyecto es una API REST desarrollada con Spring Boot y JPA para la gestió
 - **repository/**: Interfaces que extienden JpaRepository para el acceso a datos.
 - **services/**: Lógica de negocio y servicios de la aplicación.
 
+## Persistencia de datos
+La persistencia de los datos se realiza en una base de datos PostgreSQL alojada en Supabase.
+
 ## Requisitos previos
 - Java 17 
 - Maven 3.8+
@@ -16,7 +19,8 @@ Este proyecto es una API REST desarrollada con Spring Boot y JPA para la gestió
 1. Clona el repositorio.
 2. Navega a la carpeta `demo`.
 3. Ejecuta: en la terminal
-   
+
+   mvn clean install  (opcional)
    mvn spring-boot:run
    
   
@@ -33,6 +37,5 @@ http://localhost:8080/swagger-ui/index.html#
 
 ## Autor
 - Sergio Alexander Gomez Zapata
-
 
 

@@ -1,9 +1,18 @@
 package com.uptc.demo.controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.uptc.demo.models.Usiario;
+import com.uptc.demo.models.UsiarioDTO;
 import com.uptc.demo.services.UsiarioServices;
 
 @RestController
@@ -28,7 +37,11 @@ public class UsiarioController {
     }
 
     @PostMapping("/save")
-    public void save(@RequestBody Usiario usiario) {
+    public void save(@RequestBody UsiarioDTO usiarioDTO) {
+        Usiario usiario = new Usiario();
+        usiario.setNombre(usiarioDTO.getNombre());
+        usiario.setCorreo(usiarioDTO.getCorreo());
+        usiario.setTelefono(usiarioDTO.getTelefono());
         usiarioServices.save(usiario);
     }
 }
