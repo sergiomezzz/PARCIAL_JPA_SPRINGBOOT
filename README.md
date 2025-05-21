@@ -16,7 +16,8 @@ Este proyecto es una API REST desarrollada con Spring Boot y JPA para la gestió
 1. Clona el repositorio.
 2. Navega a la carpeta `demo`.
 3. Ejecuta: en la terminal
-   
+
+   mvn clean install  (opcional)
    mvn spring-boot:run
    
   
